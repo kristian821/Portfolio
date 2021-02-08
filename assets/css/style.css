@@ -31,6 +31,7 @@ header h1 {
     font-size: 44px;
     color: var(--mercury);
     text-shadow: 0 0 20px rgba(0 0 0 0.75);
+    margin: 15px;
 }
 
 header a {
@@ -44,7 +45,7 @@ header nav ul {
     justify-content: space-between;
     align-items: center;
     list-style: none;
-    margin: 50%;
+    margin: 30px;
 }
 
 header nav ul li a {
@@ -60,7 +61,6 @@ header nav ul li a {
     color: rgb(252 225 56);
     background-color: rgb(57 166 178);
     margin: 15px 30px;
-    border
 }
 
 .run-buddy p {
