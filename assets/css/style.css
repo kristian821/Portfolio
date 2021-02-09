@@ -6,8 +6,6 @@
 
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
     text-decoration: none;
 }
 
@@ -17,7 +15,6 @@ body {
 }
 
 header {
-    padding: 20px, 35px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -29,7 +26,7 @@ header {
 }
 
 header h1 {
-    font-size: 44px;
+    font-size: 4.5vh;
     color: var(--mercury);
     text-shadow: 0 0 20px rgba(0 0 0 0.75);
     margin: 15px;
@@ -38,7 +35,6 @@ header h1 {
 header a {
     color: var(--mercury);
     text-decoration: none;
-    font-size: 25px;
 }
 
 header nav ul {
@@ -53,21 +49,54 @@ header nav ul {
 header nav ul li a {
     padding: 10px 15px;
     margin: 0;
+    font-size: 2vh;
 }
 
-.main-project img {
-    width: 100%
+.intro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    background-color: var(--tin);
 }
 
-.run-buddy h2 {
+.intro h2 {
+    color: var(--mercury);
+    padding: 1% 1% 5% 1%;
+    height: 10%;
+    order: 1;
+    flex: 1 1 auto;
+}
+
+.intro p {
+    color: var(--mercury);
+    padding: 10px auto;
+    width: 66%;
+    order: 2;
+    flex: 2 1 auto;
+    padding: 10px 
+}
+.projects {
+    width: 100%;
+    display: flex;
+    flex: wrap;
+    justify-content: center;
+    
+}
+
+.projects p {
+    display: flex;
+    flex: 2 1 auto;
+    align-self: flex-end;
+}
+
+.projects img { 
+    width: 100%;
+}
+.run-buddy {
     color: rgb(252 225 56);
     background-color: rgb(57 166 178);
-    margin: 15px 30px;
-}
-
-.run-buddy p {
-    background-color: rgb(57 166 178);
-    color: rgb(252 225 56);
 }
 
 footer {
@@ -92,4 +121,37 @@ footer a {
     color: var(--mercury);
     font-size: 15px;
     padding: 10px;
+}
+
+/* Create a Media Query for Tablets and Phones to switch view to border-bottom instead of border-right */
+@media screen and (max-width: 1082px) {
+    .intro {
+        align-items: flex-start;
+    }
+
+    .intro h2 {
+        border-right: var(--lead) solid;
+    }
+
+    .projects p {
+        align-content: stretch;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+   
+}
+
+@media screen and (max-width: 575px) {
+    .intro {
+        align-items: center;
+    }
+     .intro h2 {
+         border-bottom: var(--mlead) solid;
+     }
+
+     .main-project {
+         width: 100%;
+     }
 }
