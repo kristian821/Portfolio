@@ -55,8 +55,8 @@ header nav ul li a {
 .intro {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     background-color: var(--tin);
 }
@@ -67,6 +67,7 @@ header nav ul li a {
     height: 10%;
     order: 1;
     flex: 1 1 auto;
+    border-right: var(--lead) solid;
 }
 
 .intro p {
@@ -125,13 +126,9 @@ footer a {
 
 /* Create a Media Query for Tablets and Phones to switch view to border-bottom instead of border-right */
 @media screen and (max-width: 1082px) {
-    .intro {
-        align-items: flex-start;
-    }
+    
 
-    .intro h2 {
-        border-right: var(--lead) solid;
-    }
+   
 
     .projects p {
         align-content: stretch;
@@ -145,10 +142,12 @@ footer a {
 
 @media screen and (max-width: 575px) {
     .intro {
-        align-items: center;
+       
+        flex-flow: column wrap;
     }
      .intro h2 {
-         border-bottom: var(--mlead) solid;
+         border-right: none;
+         border-bottom: var(--lead) solid;
      }
 
      .main-project {
